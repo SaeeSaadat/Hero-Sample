@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		0088E4D4244F655200A8DAE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0088E4D2244F655200A8DAE8 /* Main.storyboard */; };
 		0088E4D6244F655400A8DAE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0088E4D5244F655400A8DAE8 /* Assets.xcassets */; };
 		0088E4D9244F655400A8DAE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0088E4D7244F655400A8DAE8 /* LaunchScreen.storyboard */; };
+		0088E4E3244F671200A8DAE8 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088E4E2244F671200A8DAE8 /* CityCell.swift */; };
+		0088E4E4244F671200A8DAE8 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088E4E0244F671200A8DAE8 /* City.swift */; };
+		0088E4E5244F671200A8DAE8 /* CITIES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088E4E1244F671200A8DAE8 /* CITIES.swift */; };
+		0088E4E7244F6D9E00A8DAE8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088E4E6244F6D9E00A8DAE8 /* Image.swift */; };
+		0088E4E9244F6EE500A8DAE8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088E4E8244F6EE500A8DAE8 /* DetailViewController.swift */; };
+		0088E4EB244F6F2300A8DAE8 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0088E4EA244F6F2300A8DAE8 /* Detail.storyboard */; };
+		CA46AB0D110533CBC6B85F9A /* Pods_Hero_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B8834B85B8B6DF4C9D9964 /* Pods_Hero_Sample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,15 @@
 		0088E4D5244F655400A8DAE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0088E4D8244F655400A8DAE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0088E4DA244F655400A8DAE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0088E4E0244F671200A8DAE8 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		0088E4E1244F671200A8DAE8 /* CITIES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CITIES.swift; sourceTree = "<group>"; };
+		0088E4E2244F671200A8DAE8 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		0088E4E6244F6D9E00A8DAE8 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		0088E4E8244F6EE500A8DAE8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0088E4EA244F6F2300A8DAE8 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		084241F25FBC9385F05CB633 /* Pods-Hero Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hero Sample.release.xcconfig"; path = "Target Support Files/Pods-Hero Sample/Pods-Hero Sample.release.xcconfig"; sourceTree = "<group>"; };
+		0BA954EF0DB5DCBDC4B4F19C /* Pods-Hero Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hero Sample.debug.xcconfig"; path = "Target Support Files/Pods-Hero Sample/Pods-Hero Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		43B8834B85B8B6DF4C9D9964 /* Pods_Hero_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hero_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA46AB0D110533CBC6B85F9A /* Pods_Hero_Sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,8 @@
 			children = (
 				0088E4CB244F655200A8DAE8 /* Hero Sample */,
 				0088E4CA244F655200A8DAE8 /* Products */,
+				CF3BFF4A7D79B2B466D679FB /* Pods */,
+				0EEECDEA5015E943F581C917 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +80,33 @@
 				0088E4D0244F655200A8DAE8 /* ViewController.swift */,
 				0088E4D2244F655200A8DAE8 /* Main.storyboard */,
 				0088E4D5244F655400A8DAE8 /* Assets.xcassets */,
+				0088E4E1244F671200A8DAE8 /* CITIES.swift */,
+				0088E4E0244F671200A8DAE8 /* City.swift */,
+				0088E4E2244F671200A8DAE8 /* CityCell.swift */,
+				0088E4E6244F6D9E00A8DAE8 /* Image.swift */,
+				0088E4E8244F6EE500A8DAE8 /* DetailViewController.swift */,
+				0088E4EA244F6F2300A8DAE8 /* Detail.storyboard */,
 				0088E4D7244F655400A8DAE8 /* LaunchScreen.storyboard */,
 				0088E4DA244F655400A8DAE8 /* Info.plist */,
 			);
 			path = "Hero Sample";
+			sourceTree = "<group>";
+		};
+		0EEECDEA5015E943F581C917 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43B8834B85B8B6DF4C9D9964 /* Pods_Hero_Sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF3BFF4A7D79B2B466D679FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BA954EF0DB5DCBDC4B4F19C /* Pods-Hero Sample.debug.xcconfig */,
+				084241F25FBC9385F05CB633 /* Pods-Hero Sample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0088E4DD244F655400A8DAE8 /* Build configuration list for PBXNativeTarget "Hero Sample" */;
 			buildPhases = (
+				665718B42DC3FD95B219A984 /* [CP] Check Pods Manifest.lock */,
 				0088E4C5244F655200A8DAE8 /* Sources */,
 				0088E4C6244F655200A8DAE8 /* Frameworks */,
 				0088E4C7244F655200A8DAE8 /* Resources */,
+				06971783C819A80E148C41ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,19 +172,67 @@
 				0088E4D9244F655400A8DAE8 /* LaunchScreen.storyboard in Resources */,
 				0088E4D6244F655400A8DAE8 /* Assets.xcassets in Resources */,
 				0088E4D4244F655200A8DAE8 /* Main.storyboard in Resources */,
+				0088E4EB244F6F2300A8DAE8 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06971783C819A80E148C41ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hero Sample/Pods-Hero Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hero Sample/Pods-Hero Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hero Sample/Pods-Hero Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		665718B42DC3FD95B219A984 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hero Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0088E4C5244F655200A8DAE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0088E4E7244F6D9E00A8DAE8 /* Image.swift in Sources */,
 				0088E4D1244F655200A8DAE8 /* ViewController.swift in Sources */,
+				0088E4E4244F671200A8DAE8 /* City.swift in Sources */,
 				0088E4CD244F655200A8DAE8 /* AppDelegate.swift in Sources */,
+				0088E4E3244F671200A8DAE8 /* CityCell.swift in Sources */,
+				0088E4E5244F671200A8DAE8 /* CITIES.swift in Sources */,
 				0088E4CF244F655200A8DAE8 /* SceneDelegate.swift in Sources */,
+				0088E4E9244F6EE500A8DAE8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +374,7 @@
 		};
 		0088E4DE244F655400A8DAE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BA954EF0DB5DCBDC4B4F19C /* Pods-Hero Sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +393,7 @@
 		};
 		0088E4DF244F655400A8DAE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 084241F25FBC9385F05CB633 /* Pods-Hero Sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

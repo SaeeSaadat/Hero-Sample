@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "abadan-920de0d8c4de933c9f8388ca00d58f48.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "abadan-920de0d8c4de933c9f8388ca00d58f48-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "abadan-920de0d8c4de933c9f8388ca00d58f48-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
