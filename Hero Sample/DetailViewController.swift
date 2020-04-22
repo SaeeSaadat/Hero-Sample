@@ -36,11 +36,13 @@ class DetailViewController: UIViewController {
         swipeGesture.addTarget(self, action: #selector(goBack))
         self.view.addGestureRecognizer(swipeGesture)
         self.imageView.addGestureRecognizer(swipeGesture)
+        self.textView.addGestureRecognizer(swipeGesture)
     }
     
     
     @objc private func goBack(){
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        hero.dismissViewController()
     }
 
 }
