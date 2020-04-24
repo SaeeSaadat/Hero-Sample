@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class ViewController: UIViewController {
 
@@ -26,6 +27,19 @@ class ViewController: UIViewController {
         if let vc = destinationStoryBoard.instantiateViewController(identifier: "Detail") as? DetailViewController {
             vc.unsplashImage = cell.unsplashImage
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFirstTransition" {
+            let dest = segue.destination as! FirstTransitionViewController
+            dest.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .right) , dismissing: .zoomSlide(direction: .right))
+            
+        }else if segue.identifier == "showCity"{
+            let dest = segue.destination as! DetailViewController
+            let cell = sender as! CityCell
+            dest.imageView.image = cell.imageView?.image
+            dest.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .up), dismissing: .pageOut(direction: .down))
         }
     }
 

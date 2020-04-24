@@ -19,6 +19,8 @@
 		0088E4E7244F6D9E00A8DAE8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088E4E6244F6D9E00A8DAE8 /* Image.swift */; };
 		0088E4E9244F6EE500A8DAE8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0088E4E8244F6EE500A8DAE8 /* DetailViewController.swift */; };
 		0088E4EB244F6F2300A8DAE8 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0088E4EA244F6F2300A8DAE8 /* Detail.storyboard */; };
+		009FF9A92452C4570038D476 /* FirstTransitionStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009FF9A72452C4570038D476 /* FirstTransitionStoryBoard.storyboard */; };
+		009FF9AA2452C4570038D476 /* FirstTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FF9A82452C4570038D476 /* FirstTransitionViewController.swift */; };
 		CA46AB0D110533CBC6B85F9A /* Pods_Hero_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B8834B85B8B6DF4C9D9964 /* Pods_Hero_Sample.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		0088E4E6244F6D9E00A8DAE8 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0088E4E8244F6EE500A8DAE8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0088E4EA244F6F2300A8DAE8 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		009FF9A72452C4570038D476 /* FirstTransitionStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstTransitionStoryBoard.storyboard; sourceTree = "<group>"; };
+		009FF9A82452C4570038D476 /* FirstTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTransitionViewController.swift; sourceTree = "<group>"; };
 		084241F25FBC9385F05CB633 /* Pods-Hero Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hero Sample.release.xcconfig"; path = "Target Support Files/Pods-Hero Sample/Pods-Hero Sample.release.xcconfig"; sourceTree = "<group>"; };
 		0BA954EF0DB5DCBDC4B4F19C /* Pods-Hero Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hero Sample.debug.xcconfig"; path = "Target Support Files/Pods-Hero Sample/Pods-Hero Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		43B8834B85B8B6DF4C9D9964 /* Pods_Hero_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hero_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,15 +81,17 @@
 			children = (
 				0088E4CC244F655200A8DAE8 /* AppDelegate.swift */,
 				0088E4CE244F655200A8DAE8 /* SceneDelegate.swift */,
-				0088E4D0244F655200A8DAE8 /* ViewController.swift */,
 				0088E4D2244F655200A8DAE8 /* Main.storyboard */,
+				0088E4D0244F655200A8DAE8 /* ViewController.swift */,
+				0088E4EA244F6F2300A8DAE8 /* Detail.storyboard */,
+				0088E4E8244F6EE500A8DAE8 /* DetailViewController.swift */,
+				009FF9A72452C4570038D476 /* FirstTransitionStoryBoard.storyboard */,
+				009FF9A82452C4570038D476 /* FirstTransitionViewController.swift */,
 				0088E4D5244F655400A8DAE8 /* Assets.xcassets */,
 				0088E4E1244F671200A8DAE8 /* CITIES.swift */,
 				0088E4E0244F671200A8DAE8 /* City.swift */,
 				0088E4E2244F671200A8DAE8 /* CityCell.swift */,
 				0088E4E6244F6D9E00A8DAE8 /* Image.swift */,
-				0088E4E8244F6EE500A8DAE8 /* DetailViewController.swift */,
-				0088E4EA244F6F2300A8DAE8 /* Detail.storyboard */,
 				0088E4D7244F655400A8DAE8 /* LaunchScreen.storyboard */,
 				0088E4DA244F655400A8DAE8 /* Info.plist */,
 			);
@@ -169,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009FF9A92452C4570038D476 /* FirstTransitionStoryBoard.storyboard in Resources */,
 				0088E4D9244F655400A8DAE8 /* LaunchScreen.storyboard in Resources */,
 				0088E4D6244F655400A8DAE8 /* Assets.xcassets in Resources */,
 				0088E4D4244F655200A8DAE8 /* Main.storyboard in Resources */,
@@ -232,6 +239,7 @@
 				0088E4E3244F671200A8DAE8 /* CityCell.swift in Sources */,
 				0088E4E5244F671200A8DAE8 /* CITIES.swift in Sources */,
 				0088E4CF244F655200A8DAE8 /* SceneDelegate.swift in Sources */,
+				009FF9AA2452C4570038D476 /* FirstTransitionViewController.swift in Sources */,
 				0088E4E9244F6EE500A8DAE8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

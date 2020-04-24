@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-zK-MrE">
-                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -32,9 +32,15 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="cityLabel"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f0a-sH-amm">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="158"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="cityImage"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -49,6 +55,7 @@
                                         <connections>
                                             <outlet property="cityImage" destination="f0a-sH-amm" id="cxg-2z-aFr"/>
                                             <outlet property="label" destination="3BF-rS-lJx" id="QxC-CD-CIq"/>
+                                            <segue destination="yhH-qa-5Z4" kind="presentation" identifier="showCity" id="SnM-FV-1Tv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -57,11 +64,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="mk7-y7-cbb"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGh-xe-iKX">
+                                <rect key="frame" x="140.5" y="54" width="133" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="First Transition"/>
+                                <connections>
+                                    <segue destination="dr7-5X-ReN" kind="show" identifier="showFirstTransition" id="Xak-An-bye"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1FO-zK-MrE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9aX-Eb-Sy5"/>
-                            <constraint firstItem="1FO-zK-MrE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="NBb-b4-pB2"/>
+                            <constraint firstItem="1FO-zK-MrE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="NBb-b4-pB2"/>
+                            <constraint firstItem="YGh-xe-iKX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U9n-JP-lNx"/>
+                            <constraint firstItem="YGh-xe-iKX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="bWn-Up-Lde"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1FO-zK-MrE" secondAttribute="bottom" id="gHV-6f-iw2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1FO-zK-MrE" secondAttribute="trailing" id="w0s-Cv-gZj"/>
                         </constraints>
@@ -75,6 +92,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="vYj-cr-eMu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="yhH-qa-5Z4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBB-WQ-4gc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1561" y="362"/>
+        </scene>
+        <!--FirstTransitionStoryBoard-->
+        <scene sceneID="6Gl-0y-wqU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FirstTransitionStoryBoard" id="dr7-5X-ReN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DE4-FQ-oUL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vd5-vz-B0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="-162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eg7-eS-bmH">
