@@ -31,6 +31,7 @@ class DetailViewController: UIViewController {
         if let city = city {
             self.imageView.image = city.image
             imageView.hero.id = "cityImage"
+            imageView.heroModifiers = [.zPosition(4)]
         }
         
         let panGesture = UIPanGestureRecognizer()

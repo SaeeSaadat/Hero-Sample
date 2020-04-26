@@ -45,7 +45,8 @@ class ViewController: UIViewController {
             
             dest.city = cell.city
             
-            dest.hero.modalAnimationType = .selectBy(presenting: .fade , dismissing: .pageOut(direction: .down))
+            //change the transition type here : 
+            dest.hero.modalAnimationType = .selectBy(presenting: .auto , dismissing: .fade)
         }
     }
 
