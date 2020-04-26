@@ -33,14 +33,16 @@ class DetailViewController: UIViewController {
             imageView.hero.id = "cityImage"
         }
         
-        let panGesture = UIPanGestureRecognizer()
-        panGesture.addTarget(self, action: #selector(handlePan(panGR:)))
-        imageView.addGestureRecognizer(panGesture)
-        
-        
+//        let panGesture = UIPanGestureRecognizer()
+//        panGesture.addTarget(self, action: #selector(handlePan(panGR:)))
+//        imageView.addGestureRecognizer(panGesture)
+//
         
     }
     
+    @IBAction func handleThePan(_ sender: UIPanGestureRecognizer) {
+        handlePan(panGR: sender)
+    }
     
     @objc private func handlePan(panGR : UIPanGestureRecognizer){
         

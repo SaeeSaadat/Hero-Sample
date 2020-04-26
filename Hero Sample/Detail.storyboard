@@ -15,12 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZu-0I-euu">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mZu-0I-euu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="cityImage"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L4O-w7-rQ3" appends="YES" id="FQZ-6t-Ypv"/>
+                                </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tvz-TU-ZWj">
                                 <rect key="frame" x="20" y="331" width="374" height="431"/>
@@ -37,7 +41,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="mZu-0I-euu" firstAttribute="trailing" secondItem="mZu-iO-B9i" secondAttribute="trailing" id="Erf-6Y-G0B"/>
-                            <constraint firstItem="mZu-iO-B9i" firstAttribute="bottom" secondItem="mZu-0I-euu" secondAttribute="bottom" priority="250" constant="631" id="cY7-G5-wNs"/>
+                            <constraint firstItem="mZu-iO-B9i" firstAttribute="bottom" secondItem="mZu-0I-euu" secondAttribute="bottom" constant="631" id="cY7-G5-wNs"/>
                             <constraint firstItem="Tvz-TU-ZWj" firstAttribute="top" secondItem="mZu-0I-euu" secondAttribute="bottom" constant="100" id="gwp-mQ-2S2"/>
                             <constraint firstItem="mZu-iO-B9i" firstAttribute="trailing" secondItem="Tvz-TU-ZWj" secondAttribute="trailing" constant="20" id="h2q-df-oYU"/>
                             <constraint firstItem="mZu-0I-euu" firstAttribute="top" secondItem="YNS-Jd-ygw" secondAttribute="top" id="igJ-oN-olA"/>
@@ -55,6 +59,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb4-by-aHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="L4O-w7-rQ3">
+                    <connections>
+                        <action selector="handleThePan:" destination="RCJ-Ci-Xeh" id="ZzB-0h-TFd"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="18.75"/>
         </scene>

@@ -27,10 +27,6 @@ class CityCell: UITableViewCell {
         constr.priority = .init(rawValue: 999)
         self.heightAnchor.constraint(equalTo: cityImage.heightAnchor).isActive = true
         
-//        let tapGesture = UITapGestureRecognizer()
-//        tapGesture.addTarget(vc , action: #selector(vc.cellTapped(sender:)))
-//        self.addGestureRecognizer(tapGesture)
-        
         self.isHeroEnabled = true
         cityImage.heroID = "cityImage"
         imageView?.heroModifiers = [.zPosition(2)]
