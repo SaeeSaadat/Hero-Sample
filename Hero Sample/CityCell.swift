@@ -14,25 +14,27 @@ class CityCell: UITableViewCell {
     @IBOutlet weak var cityImage: UIImageView!
     @IBOutlet weak var label: UILabel!
     
-    private(set) var unsplashImage : Image? {
-        didSet {
-            cityImage.image = unsplashImage?.image
-            cityImage.heroID = unsplashImage!.id
-        }
-    }
+    private(set) var city : City?
+ 
     
     func setCell(city : City , vc: ViewController){
+        self.city = city
         if cityImage == nil {return}
-        unsplashImage = Image(pic: city.image , id : city.name)
+        self.cityImage.image = city.image
         label.text = city.name
         let constr = cityImage.heightAnchor.constraint(equalToConstant: 200.0)
         constr.isActive = true
         constr.priority = .init(rawValue: 999)
         self.heightAnchor.constraint(equalTo: cityImage.heightAnchor).isActive = true
         
-        let tapGesture = UITapGestureRecognizer()
-        tapGesture.addTarget(vc , action: #selector(vc.cellTapped(sender:)))
-        self.addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer()
+//        tapGesture.addTarget(vc , action: #selector(vc.cellTapped(sender:)))
+//        self.addGestureRecognizer(tapGesture)
+        
+        self.isHeroEnabled = true
+        cityImage.heroID = "cityImage"
+        imageView?.heroModifiers = [.zPosition(2)]
+        
     }
     
     

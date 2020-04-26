@@ -14,31 +14,38 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    var unsplashImage : Image?
+    var city : City?
     
     @IBOutlet weak var textView: UITextView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.isHeroEnabled = true
 
         textView.layer.cornerRadius = 10.0
         textView.layer.borderWidth = 1.0
         textView.layer.borderColor = UIColor.white.cgColor
         textView.clipsToBounds = true
         
-        if let image = unsplashImage {
-            imageView.image = image.image
-            imageView.heroID = image.id
+        if let city = city {
+            self.imageView.image = city.image
+            imageView.hero.id = "cityImage"
         }
         
         let panGesture = UIPanGestureRecognizer()
         panGesture.addTarget(self, action: #selector(handlePan(panGR:)))
+        imageView.addGestureRecognizer(panGesture)
+        
+        
         
     }
     
     
     @objc private func handlePan(panGR : UIPanGestureRecognizer){
+        
+        print("handling that pan real nice and good !")
+        
         let translation = panGR.translation(in: panGR.view)
         let progress = translation.y / 2 / view.bounds.height
         

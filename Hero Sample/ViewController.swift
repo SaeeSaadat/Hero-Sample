@@ -18,28 +18,34 @@ class ViewController: UIViewController {
         
         cities = CITIES.getList()
         
+        self.isHeroEnabled = true
     }
 
     
     @objc func cellTapped(sender : UITapGestureRecognizer){
         guard let cell = sender.view as? CityCell else {return}
+        cell.hero.id = "cityImage"
+        self.hero.isEnabled = true
         let destinationStoryBoard = UIStoryboard(name: "Detail" , bundle: nil)
         if let vc = destinationStoryBoard.instantiateViewController(identifier: "Detail") as? DetailViewController {
-            vc.unsplashImage = cell.unsplashImage
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.hero.isEnabled = true
         }
+        performSegue(withIdentifier: "showCity", sender: cell)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showFirstTransition" {
             let dest = segue.destination as! FirstTransitionViewController
             dest.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .right) , dismissing: .zoomSlide(direction: .right))
-            
-        }else if segue.identifier == "showCity"{
+            }
+        
+        else if segue.identifier == "showCity"{
             let dest = segue.destination as! DetailViewController
             let cell = sender as! CityCell
-            dest.imageView.image = cell.imageView?.image
-            dest.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .up), dismissing: .pageOut(direction: .down))
+            
+            dest.city = cell.city
+            
+            dest.hero.modalAnimationType = .selectBy(presenting: .fade , dismissing: .pageOut(direction: .down))
         }
     }
 

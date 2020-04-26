@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sg3-0q-Xhd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -55,7 +55,7 @@
                                         <connections>
                                             <outlet property="cityImage" destination="f0a-sH-amm" id="cxg-2z-aFr"/>
                                             <outlet property="label" destination="3BF-rS-lJx" id="QxC-CD-CIq"/>
-                                            <segue destination="yhH-qa-5Z4" kind="presentation" identifier="showCity" id="SnM-FV-1Tv"/>
+                                            <segue destination="yhH-qa-5Z4" kind="presentation" identifier="showCity" id="WGC-d8-D4L"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -83,6 +83,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1FO-zK-MrE" secondAttribute="trailing" id="w0s-Cv-gZj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="Bin-pI-euD"/>
                     <userDefinedRuntimeAttributes>
@@ -99,7 +103,7 @@
                 <viewControllerPlaceholder storyboardName="Detail" id="yhH-qa-5Z4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBB-WQ-4gc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="362"/>
+            <point key="canvasLocation" x="1758" y="308"/>
         </scene>
         <!--FirstTransitionStoryBoard-->
         <scene sceneID="6Gl-0y-wqU">
@@ -110,25 +114,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vd5-vz-B0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1649" y="-162"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eg7-eS-bmH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Sg3-0q-Xhd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IKG-ZS-7e7">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tfp-jd-eeK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pQY-kI-DVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
 </document>
